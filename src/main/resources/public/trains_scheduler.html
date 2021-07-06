@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang='de' xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="css/mycss.css">
+    <title>Trains schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width,initial-scale=1.0">
+    <script src="myscript.js" type="module"></script>
+</head>
+<body>
+<header>
+
+</header>
+<div class="menu">
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Train Schedule</a></li>
+        <li><a href="">Offers</a></li>
+        <li><a href="">Contact us</a></li>
+        <li><a href="">Search</a></li>
+    </ul>
+</div>
+<br><br><br><br><br>
+<div class="mainschedule">
+    <table style = "width: 100%;" class="trainsSch"  id="t_scheduleM">
+        <thead class="hideit" id="thid001">
+        <tr>
+            <!--                <th class="col1"><h5>Nr</h5></th>-->
+            <th class="col1"><h5>Time</h5></th>
+            <th class="col1"><h5>Type</h5></th>
+            <th class="col1"><h5>Firm</h5></th>
+            <th class="col1"><h5>Direction</h5></th>
+            <th class="col1"><h5>Delay</h5></th>
+            <th class="col1"><h5>Information</h5></th>
+            <th class="col1"><h5>Platform</h5></th>
+        </tr>
+        </thead>
+        <tbody id="tbid001">
+        </tbody>
+
+
+    </table>
+</div>
+
+
+<div class="container" id="trainFormMain">
+    <label for="idMain01">ID:</label> <br> <input id="idMain01" type="text" placeholder="ID for UPDATE or DELETE"
+                                                  name="id"><br>
+    <label for="versionM">Version</label> <br>
+    <input id="versionM" type="version" placeholder="1.1" name="version"> <br>
+    <label for="timeM">Time</label> <br>
+    <input id="timeM" type="time" placeholder="21:15:00" name="time"> <br>
+    <label for="typeM">Trains type</label><br>
+    <select name="type" id="typeM">
+
+        <option value="-">-</option>
+        <option value="S">S</option>
+        <option value="Re">Re</option>
+        <option value="U">U</option>
+
+    </select> <br>
+
+    <label for="firmM">Firm</label> <br>
+    <input id="firmM" type="text" name="firm" placeholder="ODEG"> <br>
+    <label for="infoM">Information</label> <br>
+    <input id="infoM" type="text" name="info" placeholder=""> <br>
+    <label for="platformM">Platform</label> <br>
+    <input id="platformM" type="text" name="platform" placeholder="5"> <br>
+
+    <label for="internalID">internal ID:</label> <br> <input id="internalID" type="text" placeholder="internal ID"
+                                                                 name="internalID"><br>
+
+
+    <br>
+
+    <input type="submit" id="button" value="Submit">
+    <input type="submit" id="buttonremove" value="Delete">
+    <input type="submit" id="buttonupdate" value="Update">
+    <input type="submit" id="buttonclear" value="Clear the table">
+    <br><br><br><br><br>
+
+</div>
+
+</body>
+</html>

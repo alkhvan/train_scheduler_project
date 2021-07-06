@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* Style of body */
+body {
+    color:#FFFFFF;
+	background-color: 	#27176D;
+	font-size: 150%; /* Размер шрифта */
+	float: left; /* Обтекание картинки по левому краю */
+    padding-left: 10px; /* Отступ слева */
+    padding-bottom: 10px; /* Отступ снизу */
+    margin: 0 ;
+    padding: 0;
+}
+
+.menu {
+	width: 100%;
+	display: table;
+	position: fixed;
+   // top:0;
+   // left: 0;
+}
+.menu ul {
+	display: table-row;
+}
+.menu li {
+	display: table-cell;
+	background: #FFFFFF;
+	color:#000000;
+}
+.menu ul li:hover, .menu a:hover {
+	background: #666;
+}
+.menu li a {
+	display: block;
+	padding: 8px 15px;
+	color:#000000;
+	text-align: center;
+	text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+
+<--! Table form --->
+#t_scheduleM {
+width: 100%;
+background-color: #A8BBFF;
+}
+.hideit table  {
+    width: 100%; /* Ширина таблицы */
+    hight:15px;
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    border: 4px double white; /* Параметры границы */
+    outline: 2px solid #000; /* Чёрная рамка */
+    background: #FFD1DC; /* Цвет фона */
+    vertical-align:bottom;
+    position: absolute;
+      }
+ .hideit th  {
+    padding: 1px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+    color:#000000;
+    padding-left: -100px; /* Отступ слева */
+   }
+   .hideit td  {
+       padding: 1px; /* Поля вокруг содержимого таблицы */
+       border: 1px solid black; /* Параметры рамки */
+       background-color: #A8BBFF;
+
+      }

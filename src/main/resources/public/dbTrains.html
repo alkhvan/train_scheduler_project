@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang='de' xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="css/mycss.css">
+    <title>Trains schedule DB</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width,initial-scale=1.0">
+    <script src="myscript.js" type="module"></script>
+</head>
+<body>
+<header>
+
+</header>
+<br>
+<div class="dbschedule">
+    <table style = "width: 100%;" class="trainsSchDB"  id="t_scheduleDB">
+        <thead class="hideit" id="thid001db">
+        <tr>
+            <!--                <th class="col1"><h5>Nr</h5></th>-->
+            <th class="col1"><h5>ID</h5></th>
+            <th class="col1"><h5>Version</h5></th>
+            <th class="col1"><h5>Type</h5></th>
+            <th class="col1"><h5>Time</h5></th>
+            <th class="col1"><h5>Direction</h5></th>
+            <th class="col1"><h5>Delay</h5></th>
+        </tr>
+        </thead>
+        <tbody id="tbid001db">
+        </tbody>
+
+
+    </table>
+</div>
+
+
+<br><br>
+
+<div class="container" id="trainFormDB">
+    <label for="idDB01">ID:</label> <br> <input id="idDB01" type="text" placeholder="ID for UPDATE or DELETE"
+                                                name="id"><br>
+    <label for="versionDB">Version</label> <br>
+    <input id="versionDB" type="version" placeholder="1.1" name="version"> <br>
+    <label for="timeDB">Time</label> <br>
+    <input id="timeDB" type="time" placeholder="21:15:00" name="time"> <br>
+    <label for="directionDB">Direction</label><br>
+    <select name="direction" id="directionDB">
+
+        <option value="-">-</option>
+        <option value="München">München</option>
+        <option value="Berlin">Berlin</option>
+        <option value="Hamburg">Hamburg</option>
+        <option value="Bremen">Bremen</option>
+        <option value="Paris">Paris</option>
+        <option value="Frankfurt(Oder)">Frankfurt(Oder)</option>
+    </select> <br>
+
+    <label for="delayDB">Delay</label> <br>
+    <input id="delayDB" type="text" name="delay" placeholder="5 Minutes"> <br>
+    <label for="internalIDDB">internal ID:</label> <br> <input id="internalIDDB" type="text" placeholder="internal ID"
+                                                name="internalID"><br>
+
+
+    <br>
+
+    <input type="submit" id="button" value="Submit">
+    <input type="submit" id="buttonremove" value="Delete">
+    <input type="submit" id="buttonupdate" value="Update">
+    <input type="submit" id="buttonclear" value="Clear the table">
+    <br><br><br><br><br>
+</div>
+
+</body>
+</html>
