@@ -2,10 +2,10 @@
 <html lang='de' xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" href="css/mycss.css">
-    <title>Trains schedule ODEG</title>
+    <title>Trains schedule ODEG/DB</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width,initial-scale=1.0">
-    <script src="myscript.js" type="module"></script>
+    <script src="trainJS.js" type="module"></script>
 </head>
 <body>
 <header>
@@ -16,13 +16,14 @@
     <table style = "width: 100%;" class="trainsSchOdeg"  id="t_scheduleODEG">
         <thead class="hideit" id="thid001odeg">
         <tr>
-            <!--                <th class="col1"><h5>Nr</h5></th>-->
+            <th class="col1"><h5>Nr</h5></th>
             <th class="col1"><h5>ID</h5></th>
             <th class="col1"><h5>Version</h5></th>
             <th class="col1"><h5>Type</h5></th>
             <th class="col1"><h5>Time</h5></th>
             <th class="col1"><h5>Direction</h5></th>
             <th class="col1"><h5>Delay</h5></th>
+            <th class="col1"><h5>InternalID</h5></th>
         </tr>
         </thead>
         <tbody id="tbid001odeg">
@@ -32,8 +33,9 @@
     </table>
 </div>
 
-<br><br>
+<br><br><hr>
 
+<form>
 <div class="container" id="trainFormODEG">
     <label for="idODEG01">ID:</label> <br> <input id="idODEG01" type="text" placeholder="ID for UPDATE or DELETE"
                                                 name="id"><br>
@@ -61,12 +63,13 @@
 
     <br>
 
-    <input type="submit" id="button" value="Submit">
+    <input type="submit" id="buttonsubmit" value="Submit">
     <input type="submit" id="buttonremove" value="Delete">
     <input type="submit" id="buttonupdate" value="Update">
     <input type="submit" id="buttonclear" value="Clear the table">
     <br><br><br><br><br>
 
 </div>
+</form>
 </body>
 </html>
