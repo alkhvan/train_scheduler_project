@@ -8,7 +8,7 @@ import java.util.List;
 @Table(name="trains_sceduler")
 public class TrainsSchedule {
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.AUTO, generator = "native")
     private Long ID;
     @Version
     private Long version;
@@ -29,7 +29,7 @@ public class TrainsSchedule {
     public TrainsSchedule() {
     }
 
-    public TrainsSchedule(Long ID, Long version,String time, String type, String firm, String information, int platform, int internalID) {
+    public TrainsSchedule(Long ID, Long version,String time, String type, String firm, String information, int platform) {
         this.ID = ID;
         this.version = version;
         this.type = type;

@@ -45,7 +45,7 @@ function addTrainMain(event) {   // bei event-click
 	var jsonDataString = `{"id":"${id}","version":"${version}","time":"${time}","type":"${type}","firm":"${firm}","information":"${information}","platform":"${platform}","internalID":"${internalID}"}`;
 	console.log(jsonDataString);
 
-	fetch("http://localhost:8080/json/trains", {
+	fetch("http://localhost:8080/json/trainSch", {
 		method: 'POST',
 		body: jsonDataString,
 		headers: {
@@ -85,3 +85,16 @@ input.addEventListener("click",addTrainMain);
 //UPDATE
 var input = document.getElementById("buttonupdate");
 input.addEventListener("click",updateTrainMain);
+
+function refreshTrains(){
+fetch("http://localhost:8080/json/trainSchs/all")
+	.then(getJson)
+	.then(getTxtFromJsonUndPackInsHTMLMain)
+}
+
+refreshTrains();
+
+function refreshClick() {
+	document.getElementById("tbid001").innerHTML="";
+	refreshTrains();
+}

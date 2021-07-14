@@ -4,7 +4,7 @@ function getJson(meta) {
 
 
 
-function getTxtFromJsonUndPackInsHTMLODEG(myjson) {
+function getTxtFromJsonUndPackInsHTML(myjson) {
 //	var tabelle = document.getElementById("tid001");
 	var t_header = document.getElementById("thid001odeg");
     var t_body = document.getElementById("tbid001odeg");
@@ -21,7 +21,7 @@ function getTxtFromJsonUndPackInsHTMLODEG(myjson) {
     			+ "<td>" + laufvariable.time + "</td>"
     			+ "<td>" + laufvariable.direction + "</td>"
     			+ "<td>" + laufvariable.delay +"</td>"
-    			+ "<td>" + laufvariable.internalID + "</td>"
+    		//	+ "<td>" + laufvariable.internalID + "</td>"
     		+ "</tr>")
 }
 }
@@ -54,3 +54,16 @@ function addTrainODEG(event) {   // bei event-click
 //POST
 var input = document.getElementById("buttonsubmit");
 input.addEventListener("click",addTrainODEG);
+
+function refreshTrains(){
+fetch("http://localhost:8080/json/trains/all")
+	.then(getJson)
+	.then(getTxtFromJsonUndPackInsHTML)
+}
+
+refreshTrains();
+
+function refreshClick() {
+	document.getElementById("tbid001odeg").innerHTML="";
+	refreshTrains();
+}

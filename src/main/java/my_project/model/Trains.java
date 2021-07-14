@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name="trains_sceduler_ODEG")
 public class Trains {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     private Long ID;
     @Version
     private Long version;
